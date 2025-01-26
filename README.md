@@ -1,14 +1,8 @@
-# Welcome to your CDK TypeScript project
+# About the project
 
-This is a blank project for CDK development with TypeScript.
+This is a simple aws setup. We have 4 resources in the stack
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+- `Dynamo Db Table` It stores the users information
+- `S3 Bucket` It stores the users profile images uploaded
+- `Api gateway` A simple http api gateway with 2 routes, 1 which registers new users, and the other for getting a particular users information
+- `Lambda` It receives events from our api gateway and accurately responds to those events
